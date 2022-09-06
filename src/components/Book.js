@@ -9,6 +9,7 @@ const Book = ({ id, title, authors, img, mode, rate }) => {
   const deleteBook = () => {
     const newMyBooks = myBooks.filter((book) => book.id !== id);
     setMyBooks(newMyBooks);
+    console.log('hello')
   };
 
   const handleRating = (rate) => {
