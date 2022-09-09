@@ -27,7 +27,7 @@ const SearchForm = () => {
             type="text"
             id="title"
             ref={searchInput}
-            placeholder='type here'
+            placeholder="type here"
             onChange={searchBook}
           ></input>
         </div>

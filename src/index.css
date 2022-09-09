@@ -98,6 +98,19 @@ Buttons
   color: var(--primaryColor);
 }
 
+.btn-container-login {
+  display: flex;
+  margin-top: 1rem;
+  flex-direction: column;
+  align-items: center;
+}
+.btn-container-login p {
+  margin-bottom: 0.5rem;
+}
+.btn-container-login button {
+  margin-bottom: 0.5rem;
+}
+
 /* 
 ====== 
 Navbar
@@ -137,6 +150,10 @@ Navbar
 }
 .logo h1 {
   margin-bottom: 0;
+}
+
+.navbar-hidden {
+  visibility: hidden;
 }
 /* 
 ====== 
@@ -181,13 +198,14 @@ Form
 
 .form-control label {
   display: block;
-  margin-bottom: 1.25rem;
+  margin-bottom: 1rem;
   font-weight: bold;
 }
 
 .form-control input {
   width: 100%;
   border: none;
+  margin-bottom: 1rem;
   border-color: transparent;
   background: var(--mainBackground);
   border-radius: var(--mainBorderRadius);
