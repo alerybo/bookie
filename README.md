@@ -10,5 +10,6 @@ Projects includes:
 - page routing with React Router
 - book rating functionality using React Simple Rating component
 
-![portfolio_bookie](https://user-images.githubusercontent.com/104735256/189330419-ce5c646b-f1e2-4815-8e40-c23b6ef73d99.png)
+![portfolio_bookie](https://user-images.githubusercontent.com/104735256/189489350-464a837f-b54c-400f-a28b-958bdef52d8e.png)
+
 
