@@ -1,15 +1,15 @@
-import React, { useState } from "react";
-import { Link, useSearchParams } from "react-router-dom";
+import React from "react";
+import { Link } from "react-router-dom";
 import { useGlobalContext } from "../context";
 import { Rating } from "react-simple-star-rating";
 
 const Book = ({ id, title, authors, img, mode, rate }) => {
-  const { myBooks, setMyBooks, books, setBooks } = useGlobalContext();
+  const { myBooks, setMyBooks } = useGlobalContext();
 
   const deleteBook = () => {
     const newMyBooks = myBooks.filter((book) => book.id !== id);
     setMyBooks(newMyBooks);
-    console.log('hello')
+    console.log("hello");
   };
 
   const handleRating = (rate) => {
@@ -29,7 +29,7 @@ const Book = ({ id, title, authors, img, mode, rate }) => {
         <img src={img} />
       </div>
       <div className="book-footer">
-        <h3>
+        <h3 className="book-title">
           {title.split("").length <= 30
             ? title
             : `${title.substring(0, 30)}...`}

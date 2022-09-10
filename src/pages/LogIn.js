@@ -1,6 +1,6 @@
-import React, { useCallback, useContext } from "react";
+import React, { useContext } from "react";
 import { Navigate } from "react-router";
-import { useNavigate, Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import app from "../firebase-config";
 import { AuthContext } from "../Auth";
 

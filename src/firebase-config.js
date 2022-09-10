@@ -19,12 +19,14 @@ const app = firebase.initializeApp({
 });
 
 export default app;
+
+// ignore undefined book props
 initializeFirestore(app, {
-  ignoreUndefinedProperties: true
+  ignoreUndefinedProperties: true,
 });
 export const db = getFirestore(app);
 
-
+//add user to firestore "users" collection
 export const createUserDocument = async (user) => {
   if (!user) return;
   try {
@@ -40,6 +42,7 @@ export const createUserDocument = async (user) => {
   }
 };
 
+// get current user's book from firestore
 export const getMyBooks = async (id) => {
   const docRef = doc(db, "users", id);
   const docSnap = await getDoc(docRef);
@@ -51,6 +54,7 @@ export const getMyBooks = async (id) => {
   }
 };
 
+// update user's saved books in firestore "users" collection
 export const updateMyBooks = async (myBooks, id) => {
   if (!myBooks || !id) return;
   console.log(myBooks);

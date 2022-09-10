@@ -6,8 +6,9 @@ require("dotenv").config();
 
 const app = express();
 
-app.use(cors())
+app.use(cors());
 
+//fetch books from Google Books API
 app.get("/books", (req, res) => {
   const searchTerm = req.query.q;
   const results = req.query.maxResults;

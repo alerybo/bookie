@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import BookList from "../components/BookList";
 import SearchForm from "../components/SearchForm";
 import { useGlobalContext } from "../context";
@@ -9,7 +9,7 @@ const Home = () => {
   return (
     <main>
       <SearchForm />
-      <BookList books={books} mode={'home'} />
+      <BookList books={books} mode={"home"} />
     </main>
   );
 };

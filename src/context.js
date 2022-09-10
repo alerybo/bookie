@@ -6,15 +6,6 @@ import { getMyBooks, updateMyBooks } from "./firebase-config";
 
 const AppContext = React.createContext();
 
-// const getLocalStorage = () => {
-//   let myBooks = localStorage.getItem("myBooks");
-//   if (myBooks) {
-//     return JSON.parse(localStorage.getItem("myBooks"));
-//   } else {
-//     return [];
-//   }
-// };
-
 const AppProvider = ({ children }) => {
   const { currentUser } = useContext(AuthContext);
   // ====================
@@ -54,14 +45,16 @@ const AppProvider = ({ children }) => {
           const fetchedBooks = items.map((item) => {
             //destructure an object containing book info from a book object
             const { id, volumeInfo } = item;
-            //chack if cover image exists
+            //check if cover image exists
             const imageURL = volumeInfo.imageLinks
               ? volumeInfo.imageLinks.thumbnail
               : defaultImage;
+            //check if title exists
+            const bookTitle = volumeInfo.title ? volumeInfo.title : "No title";
             //for each book return an object with title, author, cover...
             return {
               id,
-              title: volumeInfo.title,
+              title: bookTitle,
               authors: volumeInfo.authors,
               img: imageURL,
               desc: volumeInfo.description,

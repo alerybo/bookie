@@ -11,7 +11,10 @@ const categories = [
 const MyBooks = () => {
   const { myBooks } = useGlobalContext();
 
-  const [category, setCategory] = useState({ displayMode: "wanted", buttonText: "Want to read" });
+  const [category, setCategory] = useState({
+    displayMode: "wanted",
+    buttonText: "Want to read",
+  });
   const [displayedBooks, setDisplayedBooks] = useState(myBooks);
 
   //get all 'want to read' books to display them by default
@@ -24,15 +27,16 @@ const MyBooks = () => {
 
   //filter displayed books
   const filterBooks = () => {
-    const booksToDisplay = myBooks.filter((book) => book.mybooks === category.displayMode);
+    const booksToDisplay = myBooks.filter(
+      (book) => book.mybooks === category.displayMode
+    );
     setDisplayedBooks(booksToDisplay);
   };
 
   //refresh display if myBooks array changes
   useEffect(() => {
     filterBooks();
-  }, [category,myBooks]);
-  
+  }, [category, myBooks]);
 
   return (
     <section className="section">
@@ -40,7 +44,9 @@ const MyBooks = () => {
         {categories.map((cat, index) => {
           return (
             <button
-              className={`btn ${cat.displayMode === category.displayMode && "btn-active"}`}
+              className={`btn ${
+                cat.displayMode === category.displayMode && "btn-active"
+              }`}
               key={index}
               onClick={() => changeCategory(cat)}
             >

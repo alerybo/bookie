@@ -1,6 +1,6 @@
-/* ==========
+/* ================
 Variables
-========== */
+================ */
 :root {
   /* colors */
   --mainBackground: #deeced;
@@ -18,9 +18,9 @@ Variables
   --fullWidth: 1170px;
 }
 
-/* ==========
+/* ================
 Global styles
-========== */
+================ */
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap");
 * {
@@ -70,9 +70,9 @@ img {
 }
 
 /* 
-====== 
+================ 
 Buttons 
-======
+================
 */
 .btn {
   text-transform: uppercase;
@@ -83,7 +83,7 @@ Buttons
   display: inline-block;
   transition: var(--mainTransition);
   cursor: pointer;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   background: var(--primaryColor);
   border-radius: var(--mainBorderRadius);
   display: inline-block;
@@ -112,9 +112,9 @@ Buttons
 }
 
 /* 
-====== 
+================ 
 Navbar
-======
+================ 
 */
 .navbar {
   background: var(--white);
@@ -156,9 +156,9 @@ Navbar
   visibility: hidden;
 }
 /* 
-====== 
+================ 
 About
-======
+================
 */
 .about-content {
   background: var(--white);
@@ -176,9 +176,9 @@ About
 }
 
 /* 
-====== 
+================ 
 Form
-======
+================
 */
 .search {
   margin-top: 1rem;
@@ -213,9 +213,9 @@ Form
 }
 
 /* 
-====== 
+================ 
 Book List
-======
+================
 */
 
 .section {
@@ -238,9 +238,9 @@ Book List
 }
 
 /* 
-====== 
+================ 
 Book Component
-======
+================
 */
 
 .book {
@@ -264,8 +264,9 @@ Book Component
 }
 
 .book-footer {
-  position: relative;
   padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
 }
 .book-footer h3,
 .book-footer h4,
@@ -278,18 +279,13 @@ Book Component
 .book-footer p {
   color: var(--darkGrey);
   margin-bottom: 0.5rem;
-}
-
-.book-btn-container {
-  width: 90%;
-  position: absolute;
-  bottom: 1rem;
+  flex-grow: 1;
 }
 
 /* 
-====== 
+================ 
 Single Book Page
-======
+================
 */
 
 .book-section {
@@ -326,9 +322,9 @@ Single Book Page
 }
 
 /* 
-======
+================
 Loading animation
-======
+================
 */
 
 .lds-ellipsis {

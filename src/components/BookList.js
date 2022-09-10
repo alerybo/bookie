@@ -34,7 +34,7 @@ const BookList = ({ books, mode }) => {
       <div className="books-container">
         {books.map((book) => {
           //pass book's id as a unique key and copy the rest of book's prop
-          return <Book key={book.id} {...book} mode={mode}/>;
+          return <Book key={book.id} {...book} mode={mode} />;
         })}
       </div>
     </section>

@@ -1,7 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import app from "../firebase-config";
-import {createUserDocument} from '../firebase-config'
+import { createUserDocument } from "../firebase-config";
 
 const SignUp = () => {
   let navigate = useNavigate();
@@ -12,8 +12,8 @@ const SignUp = () => {
       const { user } = await app
         .auth()
         .createUserWithEmailAndPassword(email.value, password.value);
-        console.log(user.email)
-      createUserDocument(user)
+      console.log(user.email);
+      createUserDocument(user);
       navigate("/");
     } catch (error) {
       alert(error);

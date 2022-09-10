@@ -1,14 +1,12 @@
-import React,{useContext} from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import app from "../firebase-config";
 import { AuthContext } from "../Auth";
 
-
-
 const Navbar = () => {
   const { currentUser } = useContext(AuthContext);
   return (
-    <nav className={`navbar ${currentUser ? null : 'navbar-hidden'}`}>
+    <nav className={`navbar ${currentUser ? null : "navbar-hidden"}`}>
       <div className="nav-center">
         <Link to="/" className="logo">
           <h1>Bookie.</h1>
