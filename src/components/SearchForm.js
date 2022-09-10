@@ -8,6 +8,7 @@ const SearchForm = () => {
   //prevent page refresh if user presses enter
   const handleSubmit = (e) => {
     e.preventDefault();
+    searchBook();
   };
 
   //on every input value change set searched value for search input's current value
@@ -28,7 +29,6 @@ const SearchForm = () => {
             id="title"
             ref={searchInput}
             placeholder="type here"
-            onChange={searchBook}
           ></input>
         </div>
       </form>
